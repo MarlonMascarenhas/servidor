@@ -2,9 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 
-router.get('/login', function(req, res) {
-res.render('login', { title: 'Login' });
-});
+
+
 
 router.post('/login', function (req, res) {
  
@@ -31,7 +30,7 @@ router.post('/login', function (req, res) {
             console.log("Nenhuma conta cadastrada");
             
             }else{
-                
+                res.send(login);
                 console.log(resposta);
             }
 
